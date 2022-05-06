@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<!-- CTRL + 3 -->
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="508.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.PrincipalController">
+  <tabs>
+    <Tab text="Professor">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="413.0" prefWidth="600.0">
+               <children>
+                  <TextField fx:id="tfCodigoProfessor" layoutX="39.0" layoutY="43.0" onAction="#acaoProfessor" promptText="Código do Professor" />
+                  <TextField fx:id="tfNomeProfessor" layoutX="39.0" layoutY="97.0" prefHeight="25.0" prefWidth="521.0" promptText="Nome do Professor" />
+                  <TextField fx:id="tfTitulacaoProfessor" layoutX="39.0" layoutY="152.0" prefHeight="25.0" prefWidth="271.0" promptText="Titulação do Professor" />
+                  <Button fx:id="btnBuscarProfessor" layoutX="217.0" layoutY="43.0" mnemonicParsing="false" onAction="#acaoProfessor" text="Buscar" />
+                  <Button fx:id="btnInserirProfessor" layoutX="39.0" layoutY="207.0" mnemonicParsing="false" onAction="#acaoProfessor" text="Inserir" />
+                  <Button fx:id="btnAtualizarProfessor" layoutX="183.0" layoutY="207.0" mnemonicParsing="false" onAction="#acaoProfessor" text="Atualizar" />
+                  <Button fx:id="btnExcluirProfessor" layoutX="346.0" layoutY="207.0" mnemonicParsing="false" onAction="#acaoProfessor" text="Excluir" />
+                  <Button fx:id="btnListarProfessor" layoutX="508.0" layoutY="207.0" mnemonicParsing="false" onAction="#acaoProfessor" text="Listar" />
+                  <ScrollPane layoutX="39.0" layoutY="253.0">
+                     <content>
+                        <TextArea fx:id="taListaProfessores" prefHeight="200.0" prefWidth="516.0" />
+                     </content>
+                  </ScrollPane>
+                  <Button fx:id="btnCopiaProfessor" layoutX="300.0" layoutY="43.0" mnemonicParsing="false" onAction="#copiaProfessor" text="Copiar Professor" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Disciplina">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="413.0" prefWidth="600.0">
+          <children>
+                  <TextField fx:id="tfCodigoDisciplina" layoutX="39.0" layoutY="43.0" onAction="#acaoDisciplina" promptText="Código da Disciplina" />
+                  <TextField fx:id="tfNomeDisciplina" layoutX="39.0" layoutY="97.0" prefHeight="25.0" prefWidth="521.0" promptText="Nome da Disciplina" />
+                  <TextField fx:id="tfCodigoProfessorDisciplina" layoutX="39.0" layoutY="152.0" prefHeight="25.0" prefWidth="125.0" promptText="Código do Professor" />
+                  <Button fx:id="btnBuscarDisciplina" layoutX="217.0" layoutY="43.0" mnemonicParsing="false" onAction="#acaoDisciplina" text="Buscar" />
+                  <Button fx:id="btnInserirDisciplina" layoutX="39.0" layoutY="207.0" mnemonicParsing="false" onAction="#acaoDisciplina" text="Inserir" />
+                  <Button fx:id="btnAtualizarDisciplina" layoutX="183.0" layoutY="207.0" mnemonicParsing="false" onAction="#acaoDisciplina" text="Atualizar" />
+                  <Button fx:id="btnExcluirDisciplina" layoutX="346.0" layoutY="207.0" mnemonicParsing="false" onAction="#acaoDisciplina" text="Excluir" />
+                  <Button fx:id="btnListarDisciplina" layoutX="508.0" layoutY="207.0" mnemonicParsing="false" onAction="#acaoDisciplina" text="Listar" />
+                  <ScrollPane layoutX="39.0" layoutY="253.0">
+                     <content>
+                        <TextArea fx:id="taListaDisciplinas" prefHeight="200.0" prefWidth="516.0" />
+                     </content>
+                  </ScrollPane>
+                  <Label fx:id="lblNomeProfessor" layoutX="185.0" layoutY="152.0" prefHeight="26.0" prefWidth="372.0" text="Nome do Professor" />
+          </children></AnchorPane>
+      </content>
+    </Tab>    
+  </tabs>
+</TabPane>
